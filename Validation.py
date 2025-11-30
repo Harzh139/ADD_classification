@@ -14,7 +14,7 @@ def clean_text(t):
     return t
 
 # -------------- LOAD VALIDATION DATA --------------
-val_df = pd.read_csv("C:\\Users\\Harsh sharma\\Desktop\\AI\ML_intern_assignment\\Address_classifier\\data\\task_dataset - validation_dataset.csv")
+val_df = pd.read_csv("data\\task_dataset - validation_dataset.csv")
 
 # -------------- APPLY SAME PROCESSING ----------------
 val_df["clean_address"] = val_df["property_address"].apply(clean_text)

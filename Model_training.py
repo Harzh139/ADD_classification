@@ -16,7 +16,7 @@ os.makedirs("models", exist_ok=True)
 # ---------------------------------------
 # LOAD DATA
 # ---------------------------------------
-df = pd.read_csv("Validation_data/feature_engineered_tfidf.csv")
+df = pd.read_csv("data/feature_engineered_tfidf.csv")
 
 # ---------------------------------------
 # FEATURES & TARGET
@@ -27,7 +27,7 @@ feature_cols = [
 ]
 X_numeric = df[feature_cols].values  
 X_numeric_sparse = csr_matrix(X_numeric)
-X_tfidf = load_npz("Validation_data/tfidf_matrix.npz")
+X_tfidf = load_npz("data/tfidf_matrix.npz")
 X_final = hstack([X_numeric_sparse, X_tfidf])
 
 X = X_final
